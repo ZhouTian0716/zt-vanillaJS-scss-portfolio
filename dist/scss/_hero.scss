@@ -1,21 +1,20 @@
-
+@use "./variables" as *;
 
 .nav_header {
   display: flex;
-}
+  padding: 1.5rem;
+  justify-content: space-between;
+  .logo {
+    i {
+      color: white;
+    }
+  }
+  .nav__links {
+    @include text-small-thin;
 
-.logo {
-  i {
-    color: white;
+    ol {
+      --gap: 3rem;
+      list-style: decimal-leading-zero;
+    }
   }
 }
-
-.nav__links {
-  ol {
-    --gap:2rem;
-    list-style: decimal-leading-zero;
-   
-  }
-}
-
-

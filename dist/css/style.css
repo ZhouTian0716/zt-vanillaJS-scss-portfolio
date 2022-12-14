@@ -45,28 +45,50 @@ h3 {
   font-size: clamp(20px, 3vw, 40px);
 }
 
-.personal__email {
-  position: fixed;
-  right: 0;
-  bottom: 0;
+#content {
+  width: 80%;
+  padding-top: 5rem;
+  margin: 0 auto;
 }
 
 .social__links {
   position: fixed;
-  left: 0;
-  bottom: 0;
+  left: 2%;
+}
+.social__links ul {
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  --gap: 1rem;
+}
+.social__links ul li {
+  font-size: 24px;
+}
+.social__links::after {
+  content: "";
+  display: block;
+  margin: 1.5rem auto 0px auto;
+  width: 1px;
+  height: 100px;
+  background-color: #ccd6f6;
 }
 
 .nav_header {
   display: flex;
+  padding: 1.5rem;
+  justify-content: space-between;
 }
-
-.logo i {
+.nav_header .logo i {
   color: white;
 }
-
-.nav__links ol {
-  --gap:2rem;
+.nav_header .nav__links {
+  font-family: "Mukta", sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  color: #ccd6f6;
+}
+.nav_header .nav__links ol {
+  --gap: 3rem;
   list-style: decimal-leading-zero;
 }
 
