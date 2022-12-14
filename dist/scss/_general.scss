@@ -1,8 +1,29 @@
+@use "./variables" as *;
+body {
+  min-height: 100vh;
+  font-family: $font-one sans-serif;
+  background-color: $color-background;
+  color: $color-fonts;
+}
+
+h1 {
+  color: $color-fonts-darken;
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+h3 {
+  color: $color-fonts-lighten;
+  font-size: clamp(20px, 3vw, 40px);
+}
 
 
-//   body {
-
-//     min-height: 100vh;
-//     font-family: $font-one sans-serif;
-
-//   }
+.personal__email {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+.social__links {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}

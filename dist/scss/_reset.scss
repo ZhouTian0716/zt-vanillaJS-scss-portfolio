@@ -1,19 +1,17 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
-    outline: 0;
-    list-style: none;
-    text-decoration: none;
-  }
-  
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
-//   img {
-//     display: block;
-//   }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+}

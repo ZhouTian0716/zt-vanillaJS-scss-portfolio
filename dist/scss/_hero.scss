@@ -1,0 +1,21 @@
+
+
+.nav_header {
+  display: flex;
+}
+
+.logo {
+  i {
+    color: white;
+  }
+}
+
+.nav__links {
+  ol {
+    --gap:2rem;
+    list-style: decimal-leading-zero;
+   
+  }
+}
+
+

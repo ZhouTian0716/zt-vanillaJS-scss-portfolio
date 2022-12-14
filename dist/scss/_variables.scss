@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&display=swap');
-$color-one:#465cc2;
-$color-two:#e4ee59;
-$color-three:#eee4e2;
-$color-four:#e7e6cd;
-$color-five:rgb(241, 241, 13);
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+$color-background: #0a192f;
+$color-fonts: #ccd6f6;
+$color-fonts-lighten: lighten($color-fonts, 5%);
+$color-fonts-darken: darken($color-fonts, 5%);
 
-$font-one:"Mukta";
-$font-two:"Unbounded";
+// $color-one:#465cc2;
+// $color-two:#e4ee59;
+// $color-three:#eee4e2;
+// $color-four:#e7e6cd;
+// $color-five:rgb(241, 241, 13);
+
+$font-one: "Mukta";
+$font-two: "Montserrat";
+
+$fz-sx: 16px;
