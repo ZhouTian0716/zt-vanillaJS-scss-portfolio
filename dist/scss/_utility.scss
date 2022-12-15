@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -6,4 +8,17 @@
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
+}
+
+.btn__one {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid $color-fonts-one;
+  border-radius: 3px;
+  transition: all 100ms ease-in-out;
+  font-family: $font-two;
+  color: $color-fonts-two;
+  &:hover {
+    color: $color-fonts-one;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
