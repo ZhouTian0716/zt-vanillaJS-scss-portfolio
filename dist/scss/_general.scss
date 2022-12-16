@@ -7,6 +7,8 @@ body {
   color: getColor(font-one);
 }
 
+
+
 h1 {
   @include text-big-thick;
   color: getColor(font-one);
@@ -28,16 +30,12 @@ p {
 }
 
 #content {
-  width: 80%;
-  // padding-top: 5rem;
-  margin: 0 auto;
-  // main {
-  //   .content_section {
-  //     height: 100vh;
-  //     padding-top: 5rem;
-  //     background-color: $color-background-lighten;
-  //   }
-  // }
+  main{
+    section{
+      height: 100vh;
+      padding: 15vh 10vw;
+    }
+  }
 }
 
 .social__links {

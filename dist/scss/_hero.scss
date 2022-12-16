@@ -1,4 +1,14 @@
 @use "./variables" as *;
+@use "./config" as *;
+
+#nav_bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: getColor(hover-bg);
+  transition: all 500ms ease-in-out;
+}
 
 .nav_header {
   display: flex;
@@ -21,7 +31,7 @@
     }
   }
 
-  .nav__links {
+  .menue__nav {
     @include text-small-thin;
     font-family: "Montserrat";
     color: getColor(font-one);
@@ -64,5 +74,11 @@
   h3,
   p {
     @include text-small-thin;
+  }
+}
+
+@include media-tablet {
+  .menue__nav {
+    display: none;
   }
 }

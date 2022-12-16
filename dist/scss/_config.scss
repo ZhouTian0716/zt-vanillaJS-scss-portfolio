@@ -11,11 +11,49 @@ SVG Icons - svgicons.sparkk.fr
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  // fill: green;
   fill: getColor(font-one);
 }
 
 .svg-icon circle {
   stroke: #4691f6;
   stroke-width: 1;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  padding: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2.5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+// MIXINS &&&&&& FUNCTIONS
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+// MEDIA QUERY
+@mixin media-lg-mobile {
+  @media screen and (max-width: 450px) {
+    @content;
+  }
+}
+@mixin media-tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }

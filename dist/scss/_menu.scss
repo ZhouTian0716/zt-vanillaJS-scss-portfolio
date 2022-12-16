@@ -1,0 +1,88 @@
+@use "./variables" as *;
+@use "./config" as *;
+
+.menu-btn {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  right: 1rem;
+  //   top: 1rem;
+  //   transform: translateY(50%) translateY(-1.5px);
+  top: 34px;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  @include transition-ease;
+
+  &__burger {
+    position: absolute;
+    // right: 0;
+    // top: 0.5rem;
+    width: 28px;
+    height: 3px;
+
+    // background-color: getColor(font-two);
+    background-color: getColor(font-one);
+
+    @include transition-ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      width: 28px;
+      height: 3px;
+      background-color: getColor(font-one);
+      @include transition-ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      width: 28px;
+      height: 3px;
+      background: getColor(font-one);
+      @include transition-ease;
+    }
+
+    &.open {
+      transform: rotate(360deg);
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+
+      &::after {
+        width: 28px;
+        transform: rotate(-45deg) translate(3px, -7px);
+      }
+    }
+  }
+}
+
+.nav__modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  transform: translateX(50%);
+  z-index: 1;
+
+  place-items: center;
+  @include text-small-thin;
+  font-family: "Montserrat";
+  color: getColor(font-one);
+  .nav__links {
+    flex-direction: column;
+    --gap: 3rem;
+  }
+
+  background-color: transparent;
+}
+
+@include media-tablet {
+  .menu-btn {
+    display: block;
+  }
+}
