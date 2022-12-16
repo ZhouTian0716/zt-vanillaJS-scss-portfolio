@@ -3,24 +3,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 $color-background: #0a192f;
+$color-background-light: orange;
+
 $color-fonts-one: #64ffda;
 $color-fonts-two: #8892b0;
 $color-fonts-three: #ccd6f6;
 
-@media (prefers-color-scheme: dark) {
-  $color-background: #0a192f;
+//defining scss variable
+//light theme
+$colors: (
+  base: red,
+);
+//dark theme
+$colors-dark: (
+  base: #000000,
+);
+
+//converting scss variable into css variable
+@media (prefers-color-scheme: light) {
+  :root {
+    @each $name, $color in $colors {
+      --color-#{$name}: #{$color};
+    }
+    // --theme: "light";
+  }
 }
 
-@media (prefers-color-scheme: light) {
-  $color-background: blue;
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $name, $color in $colors-dark {
+      --color-#{$name}: #{$color};
+    }
+    // --theme: "dark";
+  }
+}
+//creating a function to get color instead of using css varible
+@function getColor($color-name) {
+  @return var(--color-#{$color-name});
 }
 
 [color-scheme="dark"] {
-  $color-background: red;
+  @each $name, $color in $colors-dark {
+    --color-#{$name}: #{$color};
+  }
+  --theme: "dark";
 }
 
 [color-scheme="light"] {
-  $color-background: blue;
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+  --theme: "light";
+}
+
+body {
+  background-color: getColor(base);
 }
 
 $font-one: "Bitter";
