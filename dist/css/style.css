@@ -21,26 +21,32 @@ a {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-base: red;
+    --color-base: #b7e4c7;
+    --color-font-one: #081c15;
+    --color-font-two: #1b4332;
+    --color-hover-bg: rgba(0, 0, 0, 0.1);
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-base: #000000;
+    --color-base: #081c15;
+    --color-font-one: #d8f3dc;
+    --color-font-two: #95d5b2;
+    --color-hover-bg: rgba(255, 255, 255, 0.1);
   }
 }
 [color-scheme=dark] {
-  --color-base: #000000;
-  --theme: "dark";
+  --color-base: #081c15;
+  --color-font-one: #d8f3dc;
+  --color-font-two: #95d5b2;
+  --color-hover-bg: rgba(255, 255, 255, 0.1);
 }
 
 [color-scheme=light] {
-  --color-base: red;
-  --theme: "light";
-}
-
-body {
-  background-color: var(--color-base);
+  --color-base: #b7e4c7;
+  --color-font-one: #081c15;
+  --color-font-two: #1b4332;
+  --color-hover-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* -----
@@ -54,7 +60,7 @@ SVG Icons - svgicons.sparkk.fr
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: #64ffda;
+  fill: var(--color-font-one);
 }
 
 .svg-icon circle {
@@ -74,40 +80,41 @@ SVG Icons - svgicons.sparkk.fr
 
 .btn__one {
   padding: 0.5rem 0.75rem;
-  border: 1px solid #64ffda;
+  border: 1px solid var(--color-font-one);
   border-radius: 3px;
   transition: all 100ms ease-in-out;
   font-family: "Montserrat";
-  color: #8892b0;
+  color: var(--color-font-one);
 }
 .btn__one:hover {
-  color: #64ffda;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-font-two);
+  background-color: var(--color-hover-bg);
 }
 
 body {
   min-height: 100vh;
   font-family: "Bitter" sans-serif;
-  color: #64ffda;
+  background-color: var(--color-base);
+  color: var(--color-font-one);
 }
 
 h1 {
   font-family: "Bitter", sans-serif;
   font-weight: 600;
-  color: #8892b0;
-  color: #ccd6f6;
+  color: var(--color-font-two);
+  color: var(--color-font-one);
   font-size: clamp(32px, 8vw, 54px);
 }
 
 h2 {
   font-family: "Bitter", sans-serif;
   font-weight: 600;
-  color: #8892b0;
+  color: var(--color-font-two);
   font-size: clamp(32px, 8vw, 54px);
 }
 
 h3 {
-  color: #8892b0;
+  color: var(--color-font-one);
   font-size: clamp(20px, 3vw, 40px);
 }
 
@@ -134,13 +141,16 @@ p {
 .social__links ul li {
   font-size: 20px;
 }
+.social__links ul li:hover {
+  color: var(--color-font-two);
+}
 .social__links::after {
   content: "";
   display: block;
   margin: 1.5rem auto 0px auto;
   width: 1px;
   height: 50px;
-  background-color: #64ffda;
+  background-color: var(--color-font-one);
 }
 
 .nav_header {
@@ -151,28 +161,24 @@ p {
 }
 .nav_header .theme_btn {
   background-color: transparent;
-  color: #64ffda;
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid #64ffda;
+  border: 1px solid var(--color-font-one);
   cursor: pointer;
   display: grid;
   place-items: center;
 }
 .nav_header .theme_btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.nav_header .theme_btn .logo {
-  color: #64ffda;
+  background-color: var(--color-hover-bg);
 }
 .nav_header .nav__links {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 100;
-  color: #8892b0;
+  color: var(--color-font-one);
   font-family: "Montserrat";
-  color: #8892b0;
+  color: var(--color-font-one);
   align-items: center;
 }
 .nav_header .nav__links ol {
@@ -193,11 +199,11 @@ p {
   transform: translateX(-50%);
   width: 0%;
   height: 2px;
-  background-color: #64ffda;
+  background-color: var(--color-font-one);
   transition: all 200ms ease-in-out;
 }
 .nav_header .nav__links ol li:hover {
-  color: #64ffda;
+  color: var(--color-font-two);
 }
 .nav_header .nav__links ol li:hover::after {
   opacity: 1;
@@ -213,7 +219,7 @@ p {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 100;
-  color: #8892b0;
+  color: var(--color-font-one);
 }
 
 /*# sourceMappingURL=style.css.map */

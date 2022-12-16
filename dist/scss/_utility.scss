@@ -12,13 +12,13 @@
 
 .btn__one {
   padding: 0.5rem 0.75rem;
-  border: 1px solid $color-fonts-one;
+  border: 1px solid getColor(font-one);
   border-radius: 3px;
   transition: all 100ms ease-in-out;
   font-family: $font-two;
-  color: $color-fonts-two;
+  color: getColor(font-one);
   &:hover {
-    color: $color-fonts-one;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: getColor(font-two);
+    background-color: getColor(hover-bg);
   }
 }

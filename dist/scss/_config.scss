@@ -12,7 +12,7 @@ SVG Icons - svgicons.sparkk.fr
 .svg-icon polygon,
 .svg-icon rect {
   // fill: green;
-  fill: $color-fonts-one;
+  fill: getColor(font-one);
 }
 
 .svg-icon circle {

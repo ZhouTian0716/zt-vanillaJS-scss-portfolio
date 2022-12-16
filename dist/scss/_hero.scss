@@ -8,26 +8,23 @@
   // background-color: green;
   .theme_btn {
     background-color: transparent;
-    color: $color-fonts-one;
+
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 1px solid $color-fonts-one;
+    border: 1px solid getColor(font-one);
     cursor: pointer;
     display: grid;
     place-items: center;
-    &:hover{
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    .logo {
-      color: $color-fonts-one;
+    &:hover {
+      background-color: getColor(hover-bg);
     }
   }
 
   .nav__links {
     @include text-small-thin;
     font-family: "Montserrat";
-    color: $color-fonts-two;
+    color: getColor(font-one);
     align-items: center;
 
     ol {
@@ -46,11 +43,11 @@
           transform: translateX(-50%);
           width: 0%;
           height: 2px;
-          background-color: $color-fonts-one;
+          background-color: getColor(font-one);
           transition: all 200ms ease-in-out;
         }
         &:hover {
-          color: $color-fonts-one;
+          color: getColor(font-two);
           &::after {
             opacity: 1;
             width: 100%;

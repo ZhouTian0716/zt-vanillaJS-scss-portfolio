@@ -1,5 +1,3 @@
-// You can do this import because js file has type='module' in html
-// import "../css/style.css";
 
 const themeBtn = document.querySelector(".theme_btn");
 

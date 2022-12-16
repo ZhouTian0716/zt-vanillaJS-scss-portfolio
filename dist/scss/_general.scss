@@ -3,13 +3,13 @@
 body {
   min-height: 100vh;
   font-family: $font-one sans-serif;
-  // background-color: $color-background;
-  color: $color-fonts-one;
+  background-color: getColor(base);
+  color: getColor(font-one);
 }
 
 h1 {
   @include text-big-thick;
-  color: $color-fonts-three;
+  color: getColor(font-one);
   font-size: clamp(32px, 8vw, 54px);
 }
 
@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-  color: $color-fonts-two;
+  color: getColor(font-one);
   font-size: clamp(20px, 3vw, 40px);
 }
 
@@ -52,6 +52,9 @@ p {
     --gap: 1rem;
     li {
       font-size: $fz-two;
+      &:hover {
+        color: getColor(font-two);
+      }
     }
   }
   &::after {
@@ -60,6 +63,6 @@ p {
     margin: 1.5rem auto 0px auto;
     width: 1px;
     height: 50px;
-    background-color: $color-fonts-one;
+    background-color: getColor(font-one);
   }
 }

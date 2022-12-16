@@ -2,21 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@200;300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
-$color-background: #0a192f;
-$color-background-light: orange;
-
-$color-fonts-one: #64ffda;
-$color-fonts-two: #8892b0;
-$color-fonts-three: #ccd6f6;
+$color-one: #b7e4c7;
+$color-two: #d8f3dc;
+$color-three: #95d5b2;
+$color-four: #1b4332;
+$color-five: #081c15;
 
 //defining scss variable
 //light theme
 $colors: (
-  base: red,
+  base: $color-one,
+  font-one: $color-five,
+  font-two: $color-four,
+  hover-bg: rgba(0, 0, 0, 0.1),
 );
 //dark theme
 $colors-dark: (
-  base: #000000,
+  base: $color-five,
+  font-one: $color-two,
+  font-two: $color-three,
+  hover-bg: rgba(255, 255, 255, 0.1),
 );
 
 //converting scss variable into css variable
@@ -46,18 +51,12 @@ $colors-dark: (
   @each $name, $color in $colors-dark {
     --color-#{$name}: #{$color};
   }
-  --theme: "dark";
 }
 
 [color-scheme="light"] {
   @each $name, $color in $colors {
     --color-#{$name}: #{$color};
   }
-  --theme: "light";
-}
-
-body {
-  background-color: getColor(base);
 }
 
 $font-one: "Bitter";
@@ -73,11 +72,11 @@ $fz-four: 28px;
   font-family: $font-two, sans-serif;
   font-size: $fz-one;
   font-weight: 100;
-  color: $color-fonts-two;
+  color: getColor(font-one);
 }
 
 @mixin text-big-thick {
   font-family: $font-one, sans-serif;
   font-weight: 600;
-  color: $color-fonts-two;
+  color: getColor(font-two);
 }
