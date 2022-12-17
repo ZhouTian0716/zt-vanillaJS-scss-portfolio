@@ -153,6 +153,13 @@ p {
   position: fixed;
   left: 2%;
   bottom: 0;
+  opacity: 0;
+  animation-name: side_fade_in;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 .social__links ul {
   list-style: none;
@@ -231,6 +238,7 @@ p {
 }
 .nav_header .menue__nav ol li {
   transition: all 200ms ease-in-out;
+  opacity: 0;
   position: relative;
 }
 .nav_header .menue__nav ol li::after {
@@ -283,7 +291,7 @@ p {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
-  animation-delay: 0ms;
+  animation-delay: 500ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -292,7 +300,7 @@ p {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
-  animation-delay: 300ms;
+  animation-delay: 600ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -301,7 +309,7 @@ p {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
-  animation-delay: 600ms;
+  animation-delay: 700ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -310,7 +318,7 @@ p {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
-  animation-delay: 900ms;
+  animation-delay: 800ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -319,15 +327,78 @@ p {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
-  animation-delay: 1200ms;
+  animation-delay: 900ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
+.fade_down:nth-child(1) {
+  animation-name: fade_down;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade_down:nth-child(2) {
+  animation-name: fade_down;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 100ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade_down:nth-child(3) {
+  animation-name: fade_down;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade_down:nth-child(4) {
+  animation-name: fade_down;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade_down:nth-child(5) {
+  animation-name: fade_down;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes side_fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fade_up {
   0% {
     opacity: 0;
     transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade_down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
   }
   100% {
     opacity: 1;

@@ -43,6 +43,7 @@
       list-style: decimal-leading-zero;
       li {
         transition: all 200ms ease-in-out;
+        opacity: 0;
         position: relative;
         &::after {
           content: "";
@@ -97,25 +98,47 @@
     animation-name: fade_up;
     animation-duration: 300ms;
     animation-timing-function: ease-in-out;
-    animation-delay: $i * 300ms - 300ms;
+    animation-delay: $i * 100ms - 100ms +0.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
   }
 }
 
-// #home {
-//   animation-name: one;
-//   animation-duration: 3s;
-//   animation-timing-function: ease-in-out;
-//   animation-delay: 2s;
-//   animation-fill-mode: forwards;
-// border: 1px solid red;
-// }
+@for $i from 1 through 5 {
+  .fade_down:nth-child(#{$i}) {
+    animation-name: fade_down;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: $i * 100ms - 100ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes side_fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes fade_up {
   0% {
     opacity: 0;
     transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade_down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
   }
   100% {
     opacity: 1;
