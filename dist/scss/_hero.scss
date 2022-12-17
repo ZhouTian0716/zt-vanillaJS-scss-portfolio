@@ -8,6 +8,7 @@
   left: 0;
   background-color: getColor(hover-bg);
   transition: all 500ms ease-in-out;
+  z-index: 5;
 }
 
 .nav_header {

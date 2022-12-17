@@ -182,6 +182,7 @@ p {
   left: 0;
   background-color: var(--color-hover-bg);
   transition: all 500ms ease-in-out;
+  z-index: 5;
 }
 
 .nav_header {
@@ -261,7 +262,6 @@ p {
 .menu-btn {
   display: none;
   position: fixed;
-  z-index: 99;
   right: 1rem;
   top: 34px;
   height: 20px;
@@ -296,21 +296,23 @@ p {
 }
 .menu-btn__burger.open {
   transform: rotate(360deg);
-  background: transparent;
 }
 .menu-btn__burger.open::before {
   transform: rotate(45deg) translate(5px, 8px);
+  background: var(--color-base);
 }
 .menu-btn__burger.open::after {
   width: 28px;
   transform: rotate(-45deg) translate(3px, -7px);
+  background: var(--color-base);
 }
 
 .nav__modal {
   position: fixed;
-  width: 100%;
+  right: 0;
+  width: 70%;
   height: 100%;
-  transform: translateX(50%);
+  transform: translateX(100%);
   z-index: 1;
   place-items: center;
   font-family: "Montserrat", sans-serif;
@@ -319,11 +321,17 @@ p {
   color: var(--color-font-one);
   font-family: "Montserrat";
   color: var(--color-font-one);
-  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--color-font-one);
+}
+.nav__modal.open {
+  transform: translateX(0%);
 }
 .nav__modal .nav__links {
   flex-direction: column;
-  --gap: 3rem;
+  --gap: 4rem;
+  font-size: 24px;
+  color: var(--color-base);
 }
 
 @media screen and (max-width: 768px) {

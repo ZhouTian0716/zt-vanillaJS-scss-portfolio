@@ -4,7 +4,7 @@
 .menu-btn {
   display: none;
   position: fixed;
-  z-index: 99;
+  
   right: 1rem;
   //   top: 1rem;
   //   transform: translateY(50%) translateY(-1.5px);
@@ -48,15 +48,18 @@
 
     &.open {
       transform: rotate(360deg);
-      background: transparent;
+      // background: transparent;
+      
 
       &::before {
         transform: rotate(45deg) translate(5px, 8px);
+        background:getColor(base);
       }
 
       &::after {
         width: 28px;
         transform: rotate(-45deg) translate(3px, -7px);
+        background:getColor(base);
       }
     }
   }
@@ -64,21 +67,27 @@
 
 .nav__modal {
   position: fixed;
-  width: 100%;
+  right: 0;
+  width: 70%;
   height: 100%;
-  transform: translateX(50%);
+  transform: translateX(100%);
   z-index: 1;
-
   place-items: center;
   @include text-small-thin;
   font-family: "Montserrat";
   color: getColor(font-one);
+  @include transition-ease;
+  &.open {
+    transform: translateX(0%);
+  }
   .nav__links {
     flex-direction: column;
-    --gap: 3rem;
+    --gap: 4rem;
+    font-size: $fz-three;
+    color:getColor(base)
   }
 
-  background-color: transparent;
+  background-color: getColor(font-one);
 }
 
 @include media-tablet {
