@@ -72,6 +72,14 @@
 .hero {
   flex-direction: column;
   --gap: 1.5rem;
+  align-items: flex-start;
+  h3,
+  h1,
+  h2,
+  p,
+  a {
+    opacity: 0;
+  }
   h3,
   p {
     @include text-small-thin;
@@ -81,5 +89,36 @@
 @include media-tablet {
   .menue__nav {
     display: none;
+  }
+}
+
+@for $i from 1 through 5 {
+  .fade_up:nth-child(#{$i}) {
+    animation-name: fade_up;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: $i * 300ms - 300ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+}
+
+// #home {
+//   animation-name: one;
+//   animation-duration: 3s;
+//   animation-timing-function: ease-in-out;
+//   animation-delay: 2s;
+//   animation-fill-mode: forwards;
+// border: 1px solid red;
+// }
+
+@keyframes fade_up {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,6 +1,7 @@
 const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.nav__modal');
+const overlay = document.querySelector('#overlay');
 const menuNav = document.querySelector('.nav__links');
 const navItems = document.querySelectorAll('.menu-nav__item');
 
@@ -12,6 +13,7 @@ function toggleMenu() {
   if(!showMenu) {
     hamburger.classList.add('open');
     nav.classList.add('open');
+    overlay.classList.add('open');
     menuNav.classList.add('open');
     navItems.forEach(item => item.classList.add('open'));
 
@@ -19,6 +21,7 @@ function toggleMenu() {
   } else {
     hamburger.classList.remove('open');
     nav.classList.remove('open');
+    overlay.classList.remove('open');
     menuNav.classList.remove('open');
     navItems.forEach(item => item.classList.remove('open'));
 
