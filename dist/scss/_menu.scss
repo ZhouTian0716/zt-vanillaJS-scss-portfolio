@@ -4,10 +4,7 @@
 .menu-btn {
   display: none;
   position: fixed;
-  
   right: 1rem;
-  //   top: 1rem;
-  //   transform: translateY(50%) translateY(-1.5px);
   top: 34px;
   height: 20px;
   width: 28px;
@@ -16,12 +13,8 @@
 
   &__burger {
     position: absolute;
-    // right: 0;
-    // top: 0.5rem;
     width: 28px;
     height: 3px;
-
-    // background-color: getColor(font-two);
     background-color: getColor(font-one);
 
     @include transition-ease;
@@ -48,18 +41,15 @@
 
     &.open {
       transform: rotate(360deg);
-      // background: transparent;
-      
-
       &::before {
         transform: rotate(45deg) translate(5px, 8px);
-        background:getColor(base);
+        background: getColor(base);
       }
 
       &::after {
         width: 28px;
         transform: rotate(-45deg) translate(3px, -7px);
-        background:getColor(base);
+        background: getColor(base);
       }
     }
   }
@@ -84,7 +74,7 @@
     flex-direction: column;
     --gap: 4rem;
     font-size: $fz-three;
-    color:getColor(base)
+    color: getColor(base);
   }
 
   background-color: getColor(font-one);

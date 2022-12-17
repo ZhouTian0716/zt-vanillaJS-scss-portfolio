@@ -49,9 +49,6 @@ a {
   --color-hover-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
 .svg-icon {
   width: 24px;
   aspect-ratio: 1;
@@ -90,6 +87,34 @@ SVG Icons - svgicons.sparkk.fr
   background: #555;
 }
 
+@keyframes side_fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade_up {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade_down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -199,8 +224,8 @@ p {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--color-hover-bg);
-  transition: all 500ms ease-in-out;
+  background-color: var(--color-base);
+  transition: all 300ms ease-in-out;
   z-index: 5;
 }
 
@@ -262,76 +287,11 @@ p {
   width: 100%;
 }
 
-.hero {
-  flex-direction: column;
-  --gap: 1.5rem;
-  align-items: flex-start;
-}
-.hero h3,
-.hero h1,
-.hero h2,
-.hero p,
-.hero a {
-  opacity: 0;
-}
-.hero h3,
-.hero p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 100;
-  color: var(--color-font-one);
-}
-
 @media screen and (max-width: 768px) {
   .menue__nav {
     display: none;
   }
 }
-.fade_up:nth-child(1) {
-  animation-name: fade_up;
-  animation-duration: 300ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 500ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-.fade_up:nth-child(2) {
-  animation-name: fade_up;
-  animation-duration: 300ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 600ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-.fade_up:nth-child(3) {
-  animation-name: fade_up;
-  animation-duration: 300ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 700ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-.fade_up:nth-child(4) {
-  animation-name: fade_up;
-  animation-duration: 300ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 800ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-.fade_up:nth-child(5) {
-  animation-name: fade_up;
-  animation-duration: 300ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 900ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
 .fade_down:nth-child(1) {
   animation-name: fade_down;
   animation-duration: 300ms;
@@ -377,34 +337,71 @@ p {
   animation-iteration-count: 1;
 }
 
-@keyframes side_fade_in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.hero {
+  flex-direction: column;
+  --gap: 1.5rem;
+  align-items: flex-start;
 }
-@keyframes fade_up {
-  0% {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero h3,
+.hero h1,
+.hero h2,
+.hero p,
+.hero a {
+  opacity: 0;
 }
-@keyframes fade_down {
-  0% {
-    opacity: 0;
-    transform: translateY(-30%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero h3,
+.hero p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  color: var(--color-font-one);
 }
+
+.fade_up:nth-child(1) {
+  animation-name: fade_up;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade_up:nth-child(2) {
+  animation-name: fade_up;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 600ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade_up:nth-child(3) {
+  animation-name: fade_up;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 700ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade_up:nth-child(4) {
+  animation-name: fade_up;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade_up:nth-child(5) {
+  animation-name: fade_up;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 900ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
 .menu-btn {
   display: none;
   position: fixed;
