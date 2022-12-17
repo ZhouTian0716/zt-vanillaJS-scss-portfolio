@@ -41,6 +41,7 @@
 
     &.open {
       transform: rotate(360deg);
+      // background: getColor(base);
       &::before {
         transform: rotate(45deg) translate(5px, 8px);
         background: getColor(base);
@@ -61,7 +62,7 @@
   width: 70%;
   height: 100%;
   transform: translateX(100%);
-  z-index: 1;
+  z-index: 3;
   place-items: center;
   @include text-small-thin;
   font-family: "Montserrat";
