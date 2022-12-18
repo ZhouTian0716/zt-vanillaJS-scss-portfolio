@@ -65,6 +65,15 @@ p {
   }
 }
 
+footer{
+  display:flex;
+  justify-content:center;
+  margin-bottom: 1rem;
+  .footer__p{
+    @include text-small-thin;
+  }
+}
+
 .social__links {
   position: fixed;
   left: 2vw;

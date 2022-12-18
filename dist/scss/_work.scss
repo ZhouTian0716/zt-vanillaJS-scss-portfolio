@@ -1,0 +1,20 @@
+@use "./variables" as *;
+@use "./config" as *;
+
+#work {
+  .section__title {
+    &::before {
+      content: "03.";
+    }
+  }
+  .work__layout{
+    display:flex;
+  }
+  
+}
+
+
+
+@include media-lg-mobile {
+  
+}

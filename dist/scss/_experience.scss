@@ -1,0 +1,20 @@
+@use "./variables" as *;
+@use "./config" as *;
+
+#experience {
+  .section__title {
+    &::before {
+      content: "02.";
+    }
+  }
+  .experience__layout{
+    display:flex;
+  }
+  
+}
+
+
+
+@include media-lg-mobile {
+  
+}

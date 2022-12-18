@@ -217,6 +217,18 @@ p {
   top: 0px;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+footer .footer__p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-font-one);
+}
+
 .social__links {
   position: fixed;
   left: 2vw;
@@ -568,6 +580,20 @@ p {
     width: 70%;
   }
 }
+#experience .section__title::before {
+  content: "02.";
+}
+#experience .experience__layout {
+  display: flex;
+}
+
+#work .section__title::before {
+  content: "03.";
+}
+#work .work__layout {
+  display: flex;
+}
+
 .menu-btn {
   display: none;
   position: fixed;
