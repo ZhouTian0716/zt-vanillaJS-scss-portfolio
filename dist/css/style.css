@@ -501,11 +501,46 @@ p {
 #about .about__layout .about__description ul li {
   list-style-type: "▹  ";
 }
+#about .about__layout .about__img {
+  width: 40%;
+  position: relative;
+  cursor: pointer;
+}
+#about .about__layout .about__img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--color-font-one);
+  opacity: 0.3;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+#about .about__layout .about__img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  border: 2px solid var(--color-font-one);
+  border-radius: 10px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+#about .about__layout .about__img:hover::before {
+  opacity: 0;
+}
+#about .about__layout .about__img:hover::after {
+  left: 20px;
+  top: 20px;
+}
 
 #me_img {
-  width: clamp(20px, 5vw, 40px);
+  width: 100%;
   aspect-ratio: 1;
-  width: 40%;
+  display: block;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 450px) {
@@ -517,8 +552,7 @@ p {
   #about .about__layout .about__description {
     width: 100%;
   }
-  #me_img {
-    aspect-ratio: 1;
+  #about .about__layout .about__img {
     width: 70%;
   }
 }
