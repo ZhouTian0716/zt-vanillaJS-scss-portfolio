@@ -42,15 +42,22 @@
             <!-- <i class="logo fa-brands fa-codepen"></i> -->
             <div class="menue__nav flex">
               <ol class="flex nav__links">
-                <li class="menu-nav__item fade_down"><a href="#about">About</a></li>
+                <li class="menu-nav__item fade_down">
+                  <a href="#about">About</a>
+                </li>
                 <li class="menu-nav__item fade_down">
                   <a href="#experience">Experience</a>
                 </li>
-                <li class="menu-nav__item fade_down"><a href="#work">Work</a></li>
-                <li class="menu-nav__item fade_down"><a href="#contact">Contact</a></li>
-                <li class="menu-nav__item fade_down "><a href="#resume">Resume</a></li>
+                <li class="menu-nav__item fade_down">
+                  <a href="#work">Work</a>
+                </li>
+                <li class="menu-nav__item fade_down">
+                  <a href="#contact">Contact</a>
+                </li>
+                <li class="menu-nav__item fade_down">
+                  <a href="#resume">Resume</a>
+                </li>
               </ol>
-              
             </div>
             <div class="menu-btn">
               <span class="menu-btn__burger"></span>
@@ -68,7 +75,7 @@
 
         <div id="content">
           <main>
-            <section id="home" class="hero flex">
+            <section id="home">
               <h3 class="fade_up">Hi, my name is</h3>
               <h1 class="fade_up">Zhou Tian</h1>
 
@@ -83,33 +90,78 @@
 
               <a class="btn__one fade_up" href="">Chat with me!</a>
             </section>
-            <section id="about"><h1>about</h1></section>
+            <section id="about">
+              <h3 class="section__title">About Me</h3>
+              <div class="about__layout">
+                <div class="about__description">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Nisi a eveniet natus, laudantium et rerum, nam fugit beatae
+                    corrupti ipsum illum voluptates rem? Veniam quis reiciendis
+                    eos suscipit praesentium aut dolorum, molestiae, distinctio
+                    ipsam ipsum non laboriosam vitae porro! Atque?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Repellendus sit atque cum excepturi, nulla consectetur
+                    molestias vero <span>enim earum quae</span> ratione nemo.
+                    Inventore maxime nulla neque accusamus fugit provident nam
+                    earum quo! Illum, vel dolorum fugiat cumque deserunt
+                    incidunt eligendi veniam dolor sunt. Delectus, vel
+                    exercitationem rem sint excepturi iure!
+                  </p>
+                  <p>
+                    Lorem ipsum dolor <span>enim earum quae</span> consectetur
+                    adipisicing elit. Quidem iusto beatae aliquid. Qui cum animi
+                    sint facilis, fugit architecto labore.
+                  </p>
+                  <p>
+                    Here are a few technologies I've been working with recently:
+                  </p>
+                  <ul class="grid">
+                    <li>JavaScript (ES6+)</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>TypeScript</li>
+                    <li>Sass</li>
+                    <li>Next.js</li>
+                  </ul>
+                </div>
+                <img id="me_img" src="./dist/assets/img/me.jpg" alt="me" />
+              </div>
+            </section>
+            <section id="work">
+              <h3 class="section__title">Where I've worked</h3>
+            </section>
           </main>
-          <div class="social__links">
-            <ul class="flex">
-              <li>
-                <a href="https://github.com/ZhouTian0716" target="_blank"
-                  ><i class="fa-brands fa-square-github"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://github.com/ZhouTian0716" target="_blank"
-                  ><i class="fa-brands fa-square-youtube"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://github.com/ZhouTian0716" target="_blank"
-                  ><i class="fa-brands fa-linkedin"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://github.com/ZhouTian0716" target="_blank"
-                  ><i class="fa-brands fa-codepen"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-          <p class="personal__email">anthony0716@hotmail.com</p>
+          <footer>
+            <div class="social__links">
+              <ul class="flex">
+                <li>
+                  <a href="https://github.com/ZhouTian0716" target="_blank"
+                    ><i class="fa-brands fa-square-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/ZhouTian0716" target="_blank"
+                    ><i class="fa-brands fa-square-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/ZhouTian0716" target="_blank"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/ZhouTian0716" target="_blank"
+                    ><i class="fa-brands fa-codepen"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <p>Designed & Built by Zhou Tian</p>
+            <p class="personal__email">anthony0716@hotmail.com</p>
+          </footer>
         </div>
       </div>
     </div>

@@ -63,7 +63,7 @@ $font-one: "Bitter";
 $font-two: "Montserrat";
 $font-three: "Mukta";
 
-$fz-one: 12px;
+$fz-one: 16px;
 $fz-two: 20px;
 $fz-three: 24px;
 $fz-four: 28px;
@@ -71,7 +71,7 @@ $fz-four: 28px;
 @mixin text-small-thin {
   font-family: $font-two, sans-serif;
   font-size: $fz-one;
-  font-weight: 100;
+  font-weight: 300;
   color: getColor(font-one);
 }
 

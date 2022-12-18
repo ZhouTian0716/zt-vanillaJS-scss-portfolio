@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./config" as *;
 
 body {
   min-height: 100vh;
@@ -30,9 +31,39 @@ p {
 #content {
   main {
     section {
-      height: 100vh;
-      padding: 15vh 10vw;
+      padding-top: 3rem;
+      width: 80%;
+      max-width: 1000px;
+      margin: 0 auto;
     }
+  }
+}
+
+.section__title {
+  display: flex;
+  align-items: center;
+  color: getColor(font-one);
+  // font-size: $fz-three;
+  // line-height: 0;
+  font-size: $fz-three;
+  font-family: $font-three;
+  position: relative;
+  margin-bottom: 1rem;
+  &::before {
+    display: inline;
+    @include text-small-thin;
+    margin-right: 0.5rem;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 1px;
+    background-color: getColor(font-one);
+    position: relative;
+    margin-left: 0.5rem;
+    top: 0px;
   }
 }
 
@@ -104,5 +135,21 @@ p {
   backdrop-filter: blur(3px);
   &.open {
     display: block;
+  }
+}
+
+@include media-lg-mobile {
+  .personal__email {
+    display: none;
+  }
+  .social__links {
+    position:static;
+    ul{
+      flex-direction: row;
+      justify-content:center;
+    }
+    &::after {
+      display: none;
+    }
   }
 }
