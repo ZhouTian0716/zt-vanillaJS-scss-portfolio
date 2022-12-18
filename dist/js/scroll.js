@@ -1,5 +1,6 @@
 const scrollElements = document.querySelectorAll(".js-scroll");
 
+// dividend can be set below to define trigger point for scroll appear
 const elementInView = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
 
@@ -27,7 +28,7 @@ const hideScrollElement = (element) => {
 
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
-    if (elementInView(el, 1.25)) {
+    if (elementInView(el, 1.1)) {
       displayScrollElement(el);
     } else if (elementOutofView(el)) {
       hideScrollElement(el)
