@@ -1,4 +1,4 @@
-@keyframes side_fade_in {
+@keyframes fade_in {
   0% {
     opacity: 0;
   }
@@ -10,10 +10,13 @@
 @keyframes fade_up {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(20%);
     transform: translateY(20%);
+
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -21,10 +24,12 @@
 @keyframes fade_down {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-30%);
     transform: translateY(-30%);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }

@@ -1,0 +1,16 @@
+.js-scroll {
+  opacity: 0;
+//   transition: opacity 1s;
+}
+
+// .js-scroll {
+//   &.scrolled {
+//     opacity: 1;
+//   }
+// }
+
+.scrolled {
+  &.fade_up {
+    animation: fade_up 500ms ease-in-out forwards;
+  }
+}

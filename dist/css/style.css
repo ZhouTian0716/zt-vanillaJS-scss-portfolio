@@ -88,7 +88,7 @@ a {
   background: #555;
 }
 
-@keyframes side_fade_in {
+@keyframes fade_in {
   0% {
     opacity: 0;
   }
@@ -99,20 +99,24 @@ a {
 @keyframes fade_up {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(20%);
     transform: translateY(20%);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
 @keyframes fade_down {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-30%);
     transform: translateY(-30%);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -137,6 +141,14 @@ a {
 .btn__one:hover {
   color: var(--color-font-two);
   background-color: var(--color-hover-bg);
+}
+
+.js-scroll {
+  opacity: 0;
+}
+
+.scrolled.fade_up {
+  animation: fade_up 500ms ease-in-out forwards;
 }
 
 body {
@@ -210,7 +222,7 @@ p {
   left: 2vw;
   bottom: 0;
   opacity: 0;
-  animation-name: side_fade_in;
+  animation-name: fade_in;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
   animation-delay: 1.5s;
@@ -431,7 +443,7 @@ p {
   color: var(--color-font-one);
 }
 
-.fade_up:nth-child(1) {
+#home .fade_up:nth-child(1) {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
@@ -440,7 +452,7 @@ p {
   animation-iteration-count: 1;
 }
 
-.fade_up:nth-child(2) {
+#home .fade_up:nth-child(2) {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
@@ -449,7 +461,7 @@ p {
   animation-iteration-count: 1;
 }
 
-.fade_up:nth-child(3) {
+#home .fade_up:nth-child(3) {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
@@ -458,7 +470,7 @@ p {
   animation-iteration-count: 1;
 }
 
-.fade_up:nth-child(4) {
+#home .fade_up:nth-child(4) {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
@@ -467,7 +479,7 @@ p {
   animation-iteration-count: 1;
 }
 
-.fade_up:nth-child(5) {
+#home .fade_up:nth-child(5) {
   animation-name: fade_up;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;

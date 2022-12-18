@@ -43,8 +43,6 @@ p {
   display: flex;
   align-items: center;
   color: getColor(font-one);
-  // font-size: $fz-three;
-  // line-height: 0;
   font-size: $fz-three;
   font-family: $font-three;
   position: relative;
@@ -72,7 +70,7 @@ p {
   left: 2vw;
   bottom: 0;
   opacity: 0;
-  animation-name: side_fade_in;
+  animation-name: fade_in;
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
   animation-delay: 1.5s;
