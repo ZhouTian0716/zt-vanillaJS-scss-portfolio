@@ -624,7 +624,7 @@ footer .footer__p {
   color: var(--color-font-one);
 }
 #content main #experience .experience__layout .experience__container .experience__details.active {
-  display: block;
+  display: flex;
 }
 #content main #experience .experience__layout .experience__container .experience__details.active.fade_up {
   animation: fade_up 500ms ease-in-out forwards;
