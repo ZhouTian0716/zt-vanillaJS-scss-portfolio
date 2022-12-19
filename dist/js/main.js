@@ -13,3 +13,18 @@ window.addEventListener("scroll", function () {
   }
   lastScrollTop = scrollTop;
 });
+
+// set work experience menu tab click event
+let expIndex;
+const expBtns = document.querySelectorAll(".experience__btn");
+const expTabs = document.querySelector(".experience__tabs");
+const expActive = document.querySelector("#experience__active");
+
+expBtns.forEach((e) =>
+  e.addEventListener("click", (e) => {
+    expIndex = parseInt(e.target.getAttribute("data-index"));
+    console.log(expIndex);
+
+    expActive.style.transform = `translate(-100%, ${expIndex * 100}%)`;
+  })
+);

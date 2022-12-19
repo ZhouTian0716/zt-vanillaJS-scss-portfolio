@@ -23,6 +23,8 @@ $colors-dark: (
   font-two: $color-three,
   hover-bg: rgba(255, 255, 255, 0.1),
 );
+//variable for active tab index
+
 
 //converting scss variable into css variable
 @media (prefers-color-scheme: light) {

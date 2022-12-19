@@ -50,6 +50,10 @@ a {
   --color-hover-bg: rgba(0, 0, 0, 0.1);
 }
 
+:root {
+  --index: 1;
+}
+
 .svg-icon {
   width: 24px;
   aspect-ratio: 1;
@@ -66,25 +70,18 @@ a {
   stroke-width: 1;
 }
 
-/* width */
-::-webkit-scrollbar {
+* ::-webkit-scrollbar {
   width: 5px;
   padding: 1px;
 }
-
-/* Track */
-::-webkit-scrollbar-track {
+* ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
+* ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 2.5px;
 }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+* ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
@@ -209,7 +206,7 @@ p {
 .section__title::after {
   content: "";
   display: inline-block;
-  width: 40%;
+  width: 30%;
   height: 1px;
   background-color: var(--color-font-one);
   position: relative;
@@ -311,6 +308,9 @@ footer .footer__p {
     justify-content: center;
   }
   .social__links::after {
+    display: none;
+  }
+  .section__title::after {
     display: none;
   }
 }
@@ -580,13 +580,87 @@ footer .footer__p {
     width: 70%;
   }
 }
-#experience .section__title::before {
+#content main #experience {
+  max-width: 800px;
+}
+#content main #experience .section__title::before {
   content: "02.";
 }
-#experience .experience__layout {
+#content main #experience .experience__layout {
   display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+#content main #experience .experience__layout .experience__tabs {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  border-left: 2px solid var(--color-hover-bg);
+  position: relative;
+}
+#content main #experience .experience__layout .experience__tabs #experience__active {
+  width: 2px;
+  height: 16.6666666667%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-font-one);
+  transform: translate(-100%, 0%);
+  transition: all 0.3s ease-in-out;
+}
+#content main #experience .experience__layout .experience__tabs button {
+  text-align: left;
+  padding: 1rem;
+  background-color: transparent;
+  font-family: "Bitter";
+  color: var(--color-font-two);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+#content main #experience .experience__layout .experience__tabs button:hover {
+  background-color: var(--color-hover-bg);
+  color: var(--color-font-one);
+}
+#content main #experience .experience__layout .experience__container .experience__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Bitter";
+  color: var(--color-font-two);
+}
+#content main #experience .experience__layout .experience__container .experience__details .experience__title {
+  font-size: 20px;
+  color: var(--color-font-one);
+}
+#content main #experience .experience__layout .experience__container .experience__details .experience__period {
+  font-size: 13px;
+}
+#content main #experience .experience__layout .experience__container .experience__details ul {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+#content main #experience .experience__layout .experience__container .experience__details ul li {
+  line-height: 1.5;
+  list-style-type: "▹  ";
 }
 
+@media screen and (max-width: 768px) {
+  #content main #experience .experience__layout {
+    flex-direction: column;
+  }
+  #content main #experience .experience__layout .experience__tabs {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  #content main #experience .experience__layout .experience__tabs::-webkit-scrollbar {
+    height: 5px;
+  }
+}
 #work .section__title::before {
   content: "03.";
 }

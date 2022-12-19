@@ -1,20 +1,101 @@
 @use "./variables" as *;
 @use "./config" as *;
 
-#experience {
-  .section__title {
-    &::before {
-      content: "02.";
+#content {
+  main {
+    #experience {
+      max-width: 800px;
+      .section__title {
+        &::before {
+          content: "02.";
+        }
+      }
+      .experience__layout {
+        display: flex;
+        // justify-content: space-between;
+        gap: 2rem;
+        align-items: flex-start;
+        .experience__tabs {
+          display: flex;
+          flex-direction: column;
+          width: fit-content;
+          border-left: 2px solid getColor(hover-bg);
+          position: relative;
+          #experience__active {
+            width: 2px;
+            height: calc(100% / 6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: getColor(font-one);
+            transform: translate(-100%, 0%);
+            transition: all 0.3s ease-in-out;
+          }
+
+          button {
+            text-align: left;
+            padding: 1rem;
+            background-color: transparent;
+            font-family: $font-one;
+            color: getColor(font-two);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+            &:hover {
+              background-color: getColor(hover-bg);
+              color: getColor(font-one);
+            }
+          }
+        }
+        .experience__container {
+          // width: 80%;
+          .experience__details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-family: $font-one;
+            color: getColor(font-two);
+            .experience__title {
+              font-size: $fz-two;
+              color: getColor(font-one);
+            }
+            .experience__period {
+              font-size: 13px;
+            }
+            ul {
+              font-size: 13px;
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              padding: 1rem;
+              li {
+                line-height: 1.5;
+                list-style-type: "▹  ";
+              }
+            }
+          }
+        }
+      }
     }
   }
-  .experience__layout{
-    display:flex;
-  }
-  
 }
 
-
-
-@include media-lg-mobile {
-  
+@include media-tablet {
+  #content {
+    main {
+      #experience {
+        .experience__layout {
+          flex-direction: column;
+          .experience__tabs {
+            flex-direction: row;
+            width: 100%;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+              height: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
