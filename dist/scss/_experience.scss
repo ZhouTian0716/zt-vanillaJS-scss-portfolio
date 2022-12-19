@@ -18,7 +18,7 @@
         .experience__tabs {
           display: flex;
           flex-direction: column;
-          width: fit-content;
+          min-width: 120px;
           border-left: 2px solid getColor(hover-bg);
           position: relative;
           #experience__active {
@@ -89,7 +89,24 @@
           .experience__tabs {
             flex-direction: row;
             width: 100%;
-            overflow-x: scroll;
+            border-left: none;
+            border-top: 2px solid getColor(hover-bg);
+            // overflow-x: scroll;
+            button {
+              text-align: center;
+              min-width: 120px;
+            }
+            #experience__active {
+              height: 2px;
+              width: 120px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              background-color: getColor(font-one);
+              transform: translate(0px, -2px);
+              transition: all 0.3s ease-in-out;
+            }
             &::-webkit-scrollbar {
               height: 5px;
             }
