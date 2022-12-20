@@ -33,6 +33,7 @@ function loadTheme(theme) {
   } else {
     themeBtn.innerHTML = moonSvg;
   }
+  // This is at root level
   root.setAttribute("color-scheme", `${theme}`);
 }
 

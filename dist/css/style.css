@@ -20,9 +20,14 @@ a {
   color: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --color-base: #b7e4c7;
+    --color-base-second: #d8f3dc;
     --color-font-one: #081c15;
     --color-font-two: #1b4332;
     --color-hover-bg: rgba(0, 0, 0, 0.1);
@@ -31,6 +36,7 @@ a {
 @media (prefers-color-scheme: dark) {
   :root {
     --color-base: #081c15;
+    --color-base-second: #1b4332;
     --color-font-one: #d8f3dc;
     --color-font-two: #95d5b2;
     --color-hover-bg: rgba(255, 255, 255, 0.1);
@@ -38,6 +44,7 @@ a {
 }
 [color-scheme=dark] {
   --color-base: #081c15;
+  --color-base-second: #1b4332;
   --color-font-one: #d8f3dc;
   --color-font-two: #95d5b2;
   --color-hover-bg: rgba(255, 255, 255, 0.1);
@@ -45,6 +52,7 @@ a {
 
 [color-scheme=light] {
   --color-base: #b7e4c7;
+  --color-base-second: #d8f3dc;
   --color-font-one: #081c15;
   --color-font-two: #1b4332;
   --color-hover-bg: rgba(0, 0, 0, 0.1);
@@ -684,11 +692,87 @@ footer .footer__p {
     height: 5px;
   }
 }
-#work .section__title::before {
+#content main #work {
+  max-width: 1000px;
+}
+#content main #work .section__title::before {
   content: "03.";
 }
-#work .work__layout {
+#content main #work .project__layout {
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#content main #work .project__layout .project__item {
+  display: flex;
+  padding: 2rem 0;
+  align-items: center;
+}
+#content main #work .project__layout .project__item .project__image {
+  width: 60%;
+  position: relative;
+  cursor: pointer;
+}
+#content main #work .project__layout .project__item .project__image img {
+  display: block;
+  width: 100%;
+}
+#content main #work .project__layout .project__item .project__image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  transition: all 300ms;
+  background-color: var(--color-base-second);
+  mix-blend-mode: screen;
+  z-index: 99;
+}
+#content main #work .project__layout .project__item .project__image:hover::before {
+  background-color: transparent;
+}
+#content main #work .project__layout .project__item .project__content {
+  margin-left: -10vw;
+  z-index: 3;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Bitter", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--color-font-two);
+}
+#content main #work .project__layout .project__item .project__content h3 {
+  color: var(--color-font-two);
+  font-size: 24px;
+  font-family: "Mukta";
+}
+#content main #work .project__layout .project__item .project__content h3 a:hover {
+  color: var(--color-font-one);
+}
+#content main #work .project__layout .project__item .project__content .project-description {
+  text-align: right;
+  padding: 1.5rem;
+  line-height: 2;
+  border-radius: 5px;
+  background-color: var(--color-base-second);
+}
+#content main #work .project__layout .project__item .project__content .project-tech-list {
+  margin-top: 0.5rem;
+}
+#content main #work .project__layout .project__item .project__content .project-tech-list span {
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  background-color: var(--color-base-second);
+}
+#content main #work .project__layout .project__item .project__content .project__links {
+  margin-top: 1rem;
+  font-size: 24px;
+  width: fit-content;
+}
+#content main #work .project__layout .project__item .project__content .project__links a {
+  margin: 1rem;
 }
 
 .menu-btn {

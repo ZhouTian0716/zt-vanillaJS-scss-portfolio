@@ -12,6 +12,7 @@ $color-five: #081c15;
 //light theme
 $colors: (
   base: $color-one,
+  base-second: $color-two,
   font-one: $color-five,
   font-two: $color-four,
   hover-bg: rgba(0, 0, 0, 0.1),
@@ -19,6 +20,7 @@ $colors: (
 //dark theme
 $colors-dark: (
   base: $color-five,
+  base-second: $color-four,
   font-one: $color-two,
   font-two: $color-three,
   hover-bg: rgba(255, 255, 255, 0.1),
@@ -69,6 +71,14 @@ $fz-one: 16px;
 $fz-two: 20px;
 $fz-three: 24px;
 $fz-four: 28px;
+
+
+@mixin text-small-dark {
+  font-family: $font-one, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: getColor(font-two);
+}
 
 @mixin text-small-thin {
   font-family: $font-two, sans-serif;
