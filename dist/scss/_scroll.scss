@@ -14,3 +14,15 @@
     animation: fade_up 500ms ease-in-out forwards;
   }
 }
+
+.scrolled {
+  &.left_in {
+    animation: left_in 500ms ease-in-out forwards;
+  }
+}
+
+.scrolled {
+  &.right_in {
+    animation: right_in 500ms ease-in-out forwards;
+  }
+}

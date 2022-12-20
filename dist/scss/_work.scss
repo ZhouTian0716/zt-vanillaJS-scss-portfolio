@@ -13,12 +13,12 @@
       .project__layout {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+
         .project__item {
           display: flex;
           padding: 2rem 0;
-          
           align-items: center;
+
           .project__image {
             width: 60%;
             position: relative;
@@ -36,7 +36,7 @@
               transition: all 300ms;
               background-color: getColor(base-second);
               mix-blend-mode: screen;
-              z-index: 99;
+              z-index: 3;
             }
             &:hover {
               &::before {
@@ -45,12 +45,11 @@
             }
           }
           .project__content {
-            margin-left: -10vw;
             z-index: 3;
             width: 70%;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+
             @include text-small-dark;
 
             h3 {
@@ -62,7 +61,6 @@
               }
             }
             .project-description {
-              text-align: right;
               padding: 1.5rem;
               line-height: 2;
               border-radius: 5px;
@@ -85,6 +83,25 @@
               }
             }
           }
+          &:nth-child(odd) {
+            .project__content {
+              align-items: flex-end;
+              margin-left: -10vw;
+              .project-description {
+                text-align: right;
+              }
+            }
+          }
+          &:nth-child(even) {
+            flex-direction: row-reverse;
+            .project__content {
+              align-items: flex-start;
+              margin-right: -10vw;
+              .project-description {
+                text-align: left;
+              }
+            }
+          }
         }
       }
     }
@@ -94,6 +111,37 @@
 @include media-tablet {
   #content {
     main {
+      #work {
+        .project__layout {
+          .project__item {
+            .project__image {
+              display: none;
+            }
+            .project__content {
+              width: 100%;
+              padding: 3rem 2rem;
+              background-color: getColor(hover-bg);
+              .project-description {
+                background-color: transparent;
+              }
+            }
+            &:nth-child(odd) {
+              .project__content {
+                align-items: flex-start;
+                margin-left: 0;
+                .project-description {
+                  text-align: left;
+                }
+              }
+            }
+            &:nth-child(even) {
+              .project__content {
+                margin-right: 0vw;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
