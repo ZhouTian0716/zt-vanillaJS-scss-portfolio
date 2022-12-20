@@ -17,6 +17,7 @@
   transition: all 100ms ease-in-out;
   font-family: $font-two;
   color: getColor(font-one);
+  cursor: pointer;
   &:hover {
     color: getColor(font-two);
     background-color: getColor(hover-bg);

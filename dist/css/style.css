@@ -149,6 +149,18 @@ html {
     transform: translateX(0);
   }
 }
+@keyframes scale_up {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -166,6 +178,7 @@ html {
   transition: all 100ms ease-in-out;
   font-family: "Montserrat";
   color: var(--color-font-one);
+  cursor: pointer;
 }
 .btn__one:hover {
   color: var(--color-font-two);
@@ -186,6 +199,10 @@ html {
 
 .scrolled.right_in {
   animation: right_in 500ms ease-in-out forwards;
+}
+
+.scrolled.scale_up {
+  animation: scale_up 500ms ease-in-out forwards;
 }
 
 body {
@@ -468,6 +485,15 @@ footer .footer__p {
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
   animation-delay: 400ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fade_down:nth-child(6) {
+  animation-name: fade_down;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 500ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -843,29 +869,30 @@ footer .footer__p {
     margin-right: 0vw;
   }
 }
-#content main #freelance {
+#content main #projects {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
-#content main #freelance h5 {
+#content main #projects h5 {
   text-align: center;
 }
-#content main #freelance .section__title {
+#content main #projects .section__title {
   justify-content: center;
 }
-#content main #freelance .section__title::before {
+#content main #projects .section__title::before {
   content: "04.";
 }
-#content main #freelance .section__title::after {
+#content main #projects .section__title::after {
   display: none;
 }
-#content main #freelance .layout {
+#content main #projects .layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-#content main #freelance .layout .card {
+#content main #projects .layout .card {
   padding: 1rem;
   border-radius: 5px;
   font-family: "Mukta";
@@ -874,40 +901,72 @@ footer .footer__p {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: all 300ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
-#content main #freelance .layout .card:hover {
-  transform: translateY(-1%);
+#content main #projects .layout .card:hover {
+  box-shadow: var(--color-font-two) 0px 4px 12px;
 }
-#content main #freelance .layout .card .links {
+#content main #projects .layout .card .links {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
 }
-#content main #freelance .layout .card h4 {
+#content main #projects .layout .card .links i {
+  transition: all 500ms ease-in-out;
+}
+#content main #projects .layout .card .links i:hover {
+  color: var(--color-font-one);
+}
+#content main #projects .layout .card h4 {
   font-size: 24px;
   color: var(--color-font-one);
   line-height: 1.2;
 }
-#content main #freelance .layout .card p {
+#content main #projects .layout .card p {
   text-align: justify;
 }
-#content main #freelance .layout .card .tech_tags span {
+#content main #projects .layout .card .tech_tags span {
   padding: 0.25rem 0.5rem;
   font-family: "Bitter";
   font-size: 13px;
 }
 
 @media screen and (max-width: 768px) {
-  #content main #freelance .layout {
+  #content main #projects .layout {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 450px) {
-  #content main #freelance .layout {
+  #content main #projects .layout {
     grid-template-columns: 1fr;
   }
 }
+#content main #contact {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: clamp(200px, 10vw, 400px);
+}
+#content main #contact .section__title {
+  font-size: 16px;
+}
+#content main #contact .section__title::before {
+  content: "05.";
+}
+#content main #contact .section__title::after {
+  display: none;
+}
+#content main #contact p {
+  text-indent: 2em;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-font-one);
+}
+
 .menu-btn {
   display: none;
   position: fixed;

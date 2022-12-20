@@ -1,0 +1,29 @@
+@use "./variables" as *;
+@use "./config" as *;
+
+#content {
+  main {
+    #contact {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: clamp(200px, 10vw, 400px);
+      .section__title {
+        font-size: $fz-one;
+        &::before {
+          content: "05.";
+        }
+        &::after {
+          display: none;
+        }
+      }
+      p {
+        text-indent: 2em;
+        text-align: justify;
+        @include text-small-thin;
+      }
+    }
+  }
+}

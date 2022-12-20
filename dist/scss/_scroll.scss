@@ -26,3 +26,9 @@
     animation: right_in 500ms ease-in-out forwards;
   }
 }
+
+.scrolled {
+  &.scale_up {
+    animation: scale_up 500ms ease-in-out forwards;
+  }
+}

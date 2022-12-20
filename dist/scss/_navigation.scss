@@ -76,7 +76,7 @@
   }
 }
 
-@for $i from 1 through 5 {
+@for $i from 1 through 6 {
   .fade_down:nth-child(#{$i}) {
     animation-name: fade_down;
     animation-duration: 300ms;

@@ -60,3 +60,17 @@
   }
 }
 
+@keyframes scale_up {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
