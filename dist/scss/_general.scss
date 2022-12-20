@@ -147,24 +147,3 @@ footer {
   }
 }
 
-@include media-lg-mobile {
-  .personal__email {
-    display: none;
-  }
-  .social__links {
-    position: static;
-    ul {
-      flex-direction: row;
-      justify-content: center;
-    }
-    &::after {
-      display: none;
-    }
-  }
-
-  .section__title {
-    &::after {
-      display: none;
-    }
-  }
-}

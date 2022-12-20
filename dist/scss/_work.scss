@@ -68,7 +68,16 @@
             }
             .project-tech-list {
               margin-top: 0.5rem;
+              max-width: 300px;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+
               span {
+                white-space: nowrap;
+                max-width: 70px;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 padding: 0.25rem 0.5rem;
                 border-radius: 3px;
                 background-color: getColor(base-second);
@@ -119,9 +128,10 @@
             }
             .project__content {
               width: 100%;
-              padding: 3rem 2rem;
+              padding: 1rem;
               background-color: getColor(hover-bg);
               .project-description {
+                
                 background-color: transparent;
               }
             }
