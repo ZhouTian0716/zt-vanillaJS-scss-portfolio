@@ -868,13 +868,46 @@ footer .footer__p {
 #content main #freelance .layout .card {
   padding: 1rem;
   border-radius: 5px;
+  font-family: "Mukta";
+  color: var(--color-font-two);
   background-color: var(--color-hover-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   transition: all 300ms ease-in-out;
 }
 #content main #freelance .layout .card:hover {
-  transform: translateY(-5%);
+  transform: translateY(-1%);
+}
+#content main #freelance .layout .card .links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+#content main #freelance .layout .card h4 {
+  font-size: 24px;
+  color: var(--color-font-one);
+  line-height: 1.2;
+}
+#content main #freelance .layout .card p {
+  text-align: justify;
+}
+#content main #freelance .layout .card .tech_tags span {
+  padding: 0.25rem 0.5rem;
+  font-family: "Bitter";
+  font-size: 13px;
 }
 
+@media screen and (max-width: 768px) {
+  #content main #freelance .layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  #content main #freelance .layout {
+    grid-template-columns: 1fr;
+  }
+}
 .menu-btn {
   display: none;
   position: fixed;
