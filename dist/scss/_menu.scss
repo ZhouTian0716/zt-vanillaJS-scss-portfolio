@@ -2,10 +2,9 @@
 @use "./config" as *;
 
 nav {
-  
   .menu-btn {
-    padding-right: 2rem;
-    // display: flex;
+    padding: 1rem 2rem;
+    display: none;
     // align-items: center;
     // position: fixed;
     // right: 1rem;
@@ -88,7 +87,9 @@ nav {
 }
 
 @include media-tablet {
-  .menu-btn {
-    display: block;
+  nav {
+    .menu-btn {
+      display: flex;
+    }
   }
 }

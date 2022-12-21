@@ -1008,7 +1008,8 @@ footer {
   }
 }
 nav .menu-btn {
-  padding-right: 2rem;
+  padding: 1rem 2rem;
+  display: none;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   position: relative;
@@ -1079,8 +1080,8 @@ nav .menu-btn__burger.open::after {
 }
 
 @media screen and (max-width: 768px) {
-  .menu-btn {
-    display: block;
+  nav .menu-btn {
+    display: flex;
   }
 }
 
