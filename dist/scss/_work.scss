@@ -63,7 +63,9 @@
             .project-description {
               padding: 1.5rem;
               line-height: 2;
+              text-indent: 2em;
               border-radius: 5px;
+
               background-color: getColor(base-second);
             }
             .project-tech-list {
@@ -123,6 +125,7 @@
       #work {
         .project__layout {
           .project__item {
+            padding: 1rem 0;
             .project__image {
               display: none;
             }
@@ -131,6 +134,7 @@
               padding: 1rem;
               background-color: getColor(hover-bg);
               .project-description {
+                padding: 1rem;
                 
                 background-color: transparent;
               }
@@ -140,13 +144,16 @@
                 align-items: flex-start;
                 margin-left: 0;
                 .project-description {
-                  text-align: left;
+                  text-align: justify;
                 }
               }
             }
             &:nth-child(even) {
               .project__content {
                 margin-right: 0vw;
+                .project-description {
+                  text-align: justify;
+                }
               }
             }
           }

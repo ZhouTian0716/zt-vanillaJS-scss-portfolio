@@ -137,10 +137,11 @@ footer {
 #overlay {
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   width: 100vw;
   height: 100vh;
   background-color: getColor(hover-bg);
+  -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   &.open {
     display: block;

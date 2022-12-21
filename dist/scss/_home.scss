@@ -15,8 +15,11 @@
   a {
     opacity: 0;
   }
-  h3,
+  h3{
+    @include text-small-thin;
+  }
   p {
+    text-indent: 2em;
     @include text-small-thin;
   }
 }
@@ -30,6 +33,16 @@
       animation-delay: $i * 100ms - 100ms +0.5s;
       animation-fill-mode: forwards;
       animation-iteration-count: 1;
+    }
+  }
+}
+
+@include media-tablet {
+  #home {
+    align-items: center;
+    text-align: center;
+    p{
+      text-align: justify; 
     }
   }
 }

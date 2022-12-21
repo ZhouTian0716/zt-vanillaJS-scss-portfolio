@@ -1,56 +1,62 @@
 @use "./variables" as *;
 @use "./config" as *;
 
-.menu-btn {
-  display: none;
-  position: fixed;
-  right: 1rem;
-  top: 34px;
-  height: 20px;
-  width: 28px;
-  cursor: pointer;
-  @include transition-ease;
-
-  &__burger {
-    position: absolute;
-    width: 28px;
-    height: 3px;
-    background-color: getColor(font-one);
-
+nav {
+  
+  .menu-btn {
+    padding-right: 2rem;
+    // display: flex;
+    // align-items: center;
+    // position: fixed;
+    // right: 1rem;
+    // top: 34px;
+    // height: 20px;
+    // width: 28px;
+    cursor: pointer;
     @include transition-ease;
+    position: relative;
 
-    &::before {
-      content: "";
+    &__burger {
       position: absolute;
-      top: -8px;
       width: 28px;
       height: 3px;
       background-color: getColor(font-one);
-      @include transition-ease;
-    }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 8px;
-      width: 28px;
-      height: 3px;
-      background: getColor(font-one);
       @include transition-ease;
-    }
 
-    &.open {
-      transform: rotate(360deg);
-      // background: getColor(base);
       &::before {
-        transform: rotate(45deg) translate(5px, 8px);
-        background: getColor(base);
+        content: "";
+        position: absolute;
+        top: -8px;
+        width: 28px;
+        height: 3px;
+        background-color: getColor(font-one);
+        @include transition-ease;
       }
 
       &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
         width: 28px;
-        transform: rotate(-45deg) translate(3px, -7px);
-        background: getColor(base);
+        height: 3px;
+        background: getColor(font-one);
+        @include transition-ease;
+      }
+
+      &.open {
+        transform: rotate(360deg);
+        // background: getColor(base);
+        &::before {
+          transform: rotate(45deg) translate(5px, 8px);
+          background: getColor(base);
+        }
+
+        &::after {
+          width: 28px;
+          transform: rotate(-45deg) translate(3px, -7px);
+          background: getColor(base);
+        }
       }
     }
   }
@@ -62,7 +68,7 @@
   width: 70%;
   height: 100%;
   transform: translateX(100%);
-  z-index: 3;
+  z-index: 5;
   place-items: center;
   @include text-small-thin;
   font-family: "Montserrat";

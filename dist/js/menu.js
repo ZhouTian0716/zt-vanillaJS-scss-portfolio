@@ -2,11 +2,14 @@ const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.nav__modal');
 const overlay = document.querySelector('#overlay');
+const navLinks=document.querySelectorAll('.menu-nav__item');
 
 
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
+overlay.addEventListener('click', toggleMenu);
+navLinks.forEach(el=>el.addEventListener('click', toggleMenu));
 
 function toggleMenu() {
   if(!showMenu) {
