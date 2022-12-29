@@ -54,3 +54,8 @@ window.addEventListener("resize", () => {
   }
 });
 // This is only for develepment resizing
+
+
+window.addEventListener('click',e=>{
+  console.log(e.target)
+})

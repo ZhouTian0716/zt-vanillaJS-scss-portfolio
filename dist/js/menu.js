@@ -9,7 +9,13 @@ let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
-navLinks.forEach(el=>el.addEventListener('click', toggleMenu));
+navLinks.forEach(el=>el.addEventListener('click', closeMenu));
+
+const closeMenu = () => {
+  hamburger.classList.remove("open");
+  nav.classList.remove("open");
+  showMenu = false;
+};
 
 function toggleMenu() {
   if(!showMenu) {
